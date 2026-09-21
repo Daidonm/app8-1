@@ -10,7 +10,8 @@ export default function FormPost() {
       method: 'POST',
       body: JSON.stringify(formEnt),
       headers: {'Content-Type':'application/json'}
-    }).then(response => response.text())
+    })
+      .then(response => response.text())
       .then(result => setPostedData(result))
       .catch(err => alert(err))
   }
